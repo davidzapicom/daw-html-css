@@ -1,0 +1,554 @@
+/* ------------------------------------------------------------------------------
+  Template Name: WHITE DESERT | Default. 
+  Description: Un lugar hermoso al que viajar
+  Author: David Zapico
+  Author URI:.............
+
+
+  1. GENERAL
+  2. HEADER
+  3. FOOTER
+  4. FOOTER 2 | LEGAL PAGES
+  5. SECCION 1
+  6. SECCION 2
+  7. SECCION 3
+
+/*-------------------------------------------------------------------------------
+  1. GENERAL
+-------------------------------------------------------------------------------*/
+/*TITULOS*/
+@font-face{
+    font-family: 'Enclave';
+    src: url(../fonts/Enclave.ttf);
+    font-style: normal;
+    font-weight: 100;
+  }
+  
+  /*PARRAFOS*/
+  @font-face{
+    font-family: 'Aceh';
+    src: url(../fonts/Aceh.ttf);
+    font-style: normal;
+    font-weight: 100;
+  }
+  
+  @font-face{
+    font-family: 'Aviex';
+    src: url(../fonts/Aviex.ttf);
+    font-style: normal;
+    font-weight: 100;
+  }
+  
+  
+  html{
+    background-color: #ffffff;
+  }
+  
+  body{
+    background-color: rgb(255, 255, 255);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  h1{
+    font-family: Enclave;
+    padding-top: 100px;
+    text-align: center;
+  }
+  
+  h2{
+    font-family: Aceh;
+  }
+  
+  h3{
+    font-family: Aceh;
+  }
+  
+  h4{
+    font-family: Aceh;
+  }
+  
+  p{
+    font-family: Aceh;
+  }
+  
+  
+  
+  
+  
+  /*-------------------------------------------------------------------------------
+    2. HEADER
+  -------------------------------------------------------------------------------*/
+  div.container{
+    font-family: Enclave;
+    font-size: 25px;
+    padding: 0;
+    text-align: center;
+    float: left;
+    position: fixed;
+    top: 0;
+  }
+  
+  
+  div.container img{
+    float: left;
+  }
+  
+  
+  div.container .anc{
+    padding-top: 26px;
+  }
+  
+  
+  div.container a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font: 100px;
+    font-family: 'Enclave';
+    margin: 0px 2px;
+    padding: 5px 5px;
+    position: relative;
+    float: inherit;
+    z-index: 1;
+  }
+  
+  
+  /* Highlight text out  */
+  div.highlightTextOut a{
+    color: rgba(0, 0, 0, 0.507); 
+  }
+  
+  
+  div.highlightTextOut a:hover{
+    color: rgb(0, 0, 0); 
+  }
+  
+  
+  div.highlightTextOut a:active{
+    color: rgb(0, 0, 0); 
+  }
+  
+  
+  div.highlightTextOut a:before{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 0px;
+    left: 0px;
+    padding: 5px 5px;
+    padding-top: 27px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(0.8);
+    opacity: 0;
+  } 
+  
+  
+  div.highlightTextOut a:hover:before{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  
+  div.highlightTextOut a.active{
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 0.2px;
+  }
+  
+  
+  
+  
+  
+  /*-------------------------------------------------------------------------------
+    3. FOOTER
+  -------------------------------------------------------------------------------*/
+  div.footer{
+      clear: both;
+      padding-left: 5%;
+      font-family: Aceh;
+      font-size: 15px;
+      left: 20px;
+      width: 80%;
+      text-transform: uppercase;
+      color: rgb(0, 0, 0);
+      display: inline-block;
+      cursor: pointer;
+      pointer-events: none;
+      bottom: 20px;
+    }
+  
+  
+    div#footer1{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  
+  
+    div.footer:hover {
+      pointer-events: all;
+    }
+  
+  
+    div.label {
+      display: inline-block;
+      cursor: pointer;
+      pointer-events: all;
+    }
+  
+  
+    div.spacer {
+      display: inline-block;
+      width: 80px;
+      margin-left: 15px;
+      margin-right: 15px;
+      vertical-align: middle;
+      cursor: pointer;
+      position: relative;
+    }
+  
+  
+    div.spacer:before {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid #000000;
+      height: 1px;
+      width: 0%;
+      transition: width 0.25s ease;
+      transition-delay: 0.7s;
+    }
+  
+  
+    div.item {
+      position: relative;
+      display: inline-block;
+      margin-right: 30px;
+      top: 10px;
+      opacity: 0;
+      transition: opacity 0.5s ease, top 0.5s ease;
+  
+    }
+  
+  
+    div.item2 {
+      position: relative;
+      display: inline-block;
+      top: 10px;
+      padding-bottom: 10px;
+    }
+  
+  
+    span {
+      transition: color 0.5s ease;
+    }
+  
+  
+    div.item:hover span {
+      color: rgb(0, 255, 55);
+    }
+  
+  
+    div.footer:hover .spacer:before {
+      width: 100%;
+      transition-delay: 0s;
+    }
+  
+  
+    div.footer:hover .item {
+      opacity: 1;
+      top: 0px;
+    }
+  
+  
+    div.item:nth-child(1) {
+      transition-delay: 0.45s;
+    }
+    div.item:nth-child(2) {
+      transition-delay: 0.4s;
+    }
+    div.item:nth-child(3) {
+      transition-delay: 0.35s;
+    }
+    div.item:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+    div.item:nth-child(5) {
+      transition-delay: 0.25s;
+    }
+    div.item:nth-child(6) {
+      transition-delay: 0.2s;
+    }
+    div.item:nth-child(7) {
+      transition-delay: 0.15s;
+    }
+    div.item:nth-child(8) {
+      transition-delay: 0.1s;
+    }
+    div.item:nth-child(9) {
+      transition-delay: 0.05s;
+    }
+    div.item:nth-child(10) {
+      transition-delay: 0s;
+    }
+    div.footer:hover .item:nth-child(1) {
+      transition-delay: 0.25s;
+    }
+    div.footer:hover .item:nth-child(2) {
+      transition-delay: 0.3s;
+    }
+    div.footer:hover .item:nth-child(3) {
+      transition-delay: 0.35s;
+    }
+    div.footer:hover .item:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+    div.footer:hover .item:nth-child(5) {
+      transition-delay: 0.45s;
+    }
+    div.footer:hover .item:nth-child(6) {
+      transition-delay: 0.5s;
+    }
+    div.footer:hover .item:nth-child(7) {
+      transition-delay: 0.55s;
+    }
+    div.footer:hover .item:nth-child(8) {
+      transition-delay: 0.6s;
+    }
+    div.footer:hover .item:nth-child(9) {
+      transition-delay: 0.65s;
+    }
+    div.footer:hover .item:nth-child(10) {
+      transition-delay: 0.7s;
+    }
+    
+  
+    div.footer a{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+  
+  
+    div.item:hover a{
+      color: rgb(0, 255, 55);
+    }
+    
+  
+  
+  
+  
+  
+    
+  /*-------------------------------------------------------------------------------
+    4. FOOTER 2 | LEGAL PAGES
+  -------------------------------------------------------------------------------*/
+    div.footer2{
+      float: right;
+      padding-right: 5%;
+      font-family: Aceh;
+      font-size: 15px;
+    }
+    
+    div.footer2 a{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+    
+    div.item2:hover a {
+      color: rgb(0, 255, 55);
+    }
+
+
+
+
+/*-------------------------------------------------------------------------------
+  5. SECCION 1
+-------------------------------------------------------------------------------*/
+.fotose2{
+    background-image: url("../imagenes_video/WFR.2.jpg");
+    width: 1300px;
+    height: 600px;
+  }
+  
+  
+  .text{
+    color: black;
+    display: inline;
+    float: right;
+    max-width: 700px;
+    padding-right: 100px;
+    padding-top: 60px;
+  }
+  
+
+  .title1{
+    color: BLACK;
+    text-align: center;
+  }
+  
+  
+  .title{
+    color: black;
+    float: left;
+    display: inline;
+    padding-top: 60px;
+    padding-left: 100px;
+  }
+  
+
+  .title3{
+    color: black;
+    float: left;
+    display: inline;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  
+  .fifth, .six {
+    float: left;
+    width: 25%;
+    color: black;
+    padding: 10px;
+    height: 500px;
+    text-align: center;
+    padding-top: 400px;
+  }
+  
+
+  .containersc2:after {
+    clear: both;
+  }
+  
+  
+  .se4{
+    padding-bottom: 20px;
+    color: black;
+  }
+  
+
+  /*Seccion containersc2*/
+  .fifth {
+    background-image: url("../imagenes_video/Early-emperors.1.jpg");
+    color: rgb(0, 0, 0);
+  }
+
+
+  .six {
+    background-image: url("../imagenes_video/polar-talks.1.jpg");
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  /*-------------------------------------------------------------------------------
+    6. SECCION 2
+  -------------------------------------------------------------------------------*/
+  .fotosec{
+    width: 1300px;
+    height: 500px;
+  }
+  
+  
+  .foto {
+  
+    display: inline;
+    width: 50%;
+  }
+  
+  
+  .titulo{
+    padding-top: 200px;
+  }
+  
+  
+  .titulo h1{
+    float: right;
+    display: inline;
+    width: 700px;
+    font-family: Enclave;
+    padding-right: 150px;
+    text-align: center;
+  }
+  
+  
+  .texto p{
+    display: inline;
+    float: right;
+    width: 700px;
+    padding-right: 150px;
+    text-align: center;
+  }
+  
+  
+  .foto img{
+    height: 500px;
+    float: left;
+    display: inline;
+    padding-left: 100px;
+    margin-left: 40px;
+    padding-bottom: 100px;
+  }
+  
+  
+  .textose1 p{
+    padding-left: 60PX;
+  }
+  
+  
+  .titlecen{
+    text-align: center;
+  }
+  
+
+  .textcen{
+    text-align: center;
+  }
+
+
+
+
+
+  /*-------------------------------------------------------------------------------
+  7. SECCION 3
+-------------------------------------------------------------------------------*/
+.fotosec1-1{
+    width: 1300px;
+    height: 600px;
+  }
+  
+  
+  .fotosec1 {
+    padding-top: 200px;
+    padding-left: 50px;
+    display: inline;
+  }
+  
+
+  .titulosec1 h1{
+    float: right;
+    display: inline;
+    width: 700px;
+    font-family: Enclave;
+    padding-right: 150px;
+    text-align: center;
+  }
+  
+  
+  .textosec1 p{
+    display: inline;
+    float: right;
+    width: 700px;
+    padding-right: 150px;
+    text-align: justify;
+  }
+  
+  
+  .fotosec1 img{
+    width: 500px;
+    float: left;
+    display: inline;
+    padding-left: 60px;
+    padding-top: 300px;
+  }
